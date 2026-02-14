@@ -1530,3 +1530,53 @@ body {
 .card:hover {
   transform: translateY(-5px);
 }
+
+/* NAVBAR FIX */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+/* Join Button Position */
+.join-btn {
+  margin-left: 20px;
+}
+/* ALL BUTTONS STYLE */
+button, .btn, .join-btn {
+  background: #d4af37;
+  color: black;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Animation */
+button:hover, .btn:hover, .join-btn:hover {
+  background: black;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+button:active, .btn:active, .join-btn:active {
+  transform: scale(0.96);
+}
