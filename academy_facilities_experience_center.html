@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities & Experience Center | Valendu Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-black: #050505;
+            --secondary-black: #121212;
+            --gold: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.4);
+            --white: #ffffff;
+            --gray: #a0a0a0;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--primary-black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 30px 0;
+            border-bottom: 1px solid var(--secondary-black);
+            margin-bottom: 40px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .gold-text {
+            color: var(--gold);
+        }
+
+        .btn-back {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover {
+            background: var(--gold);
+            color: var(--primary-black);
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        /* Facilities Grid */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .facility-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .facility-img {
+            height: 220px;
+            background: linear-gradient(135deg, var(--secondary-black), #222);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--gold);
+        }
+
+        .facility-content {
+            padding: 30px;
+        }
+
+        .facility-content h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+
+        .facility-content p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .facility-features {
+            list-style: none;
+        }
+
+        .facility-features li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: var(--white);
+            font-size: 0.95rem;
+        }
+
+        .facility-features li::before {
+            content: '✓';
+            color: var(--gold);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--secondary-black);
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo"><span class="gold-text">VALENDU</span> ACADEMY</div>
+            <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title">World-Class <span class="gold-text">Facilities</span></h1>
+
+        <div class="facilities-grid">
+
+            <!-- Facility 1 -->
+            <div class="facility-card">
+                <div class="facility-img"><i class="fas fa-futbol"></i></div>
+                <div class="facility-content">
+                    <h3>FIFA Standard Pitch</h3>
+                    <p>Train on professional-grade surfaces designed for optimal ball control and reduced injury risk.
+                    </p>
+                    <ul class="facility-features">
+                        <li>Regulation size turf</li>
+                        <li>Floodlights for night sessions</li>
+                        <li>Automated irrigation system</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Facility 2 -->
+            <div class="facility-card">
+                <div class="facility-img"><i class="fas fa-dumbbell"></i></div>
+                <div class="facility-content">
+                    <h3>High-Performance Gym</h3>
+                    <p>A dedicated strength and conditioning zone tailored for footballers' explosive power needs.</p>
+                    <ul class="facility-features">
+                        <li>Olympic lifting platforms</li>
+                        <li>Plyometric equipment</li>
+                        <li>Cardio & agility zones</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Facility 3 -->
+            <div class="facility-card">
+                <div class="facility-img"><i class="fas fa-heartbeat"></i></div>
+                <div class="facility-content">
+                    <h3>Recovery & Physio Center</h3>
+                    <p>Cutting-edge recovery tools to ensure athletes stay fit and bounce back faster.</p>
+                    <ul class="facility-features">
+                        <li>Ice baths & contrast therapy</li>
+                        <li>Physiotherapy clinic on-site</li>
+                        <li>Massage & rehab area</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Facility 4 -->
+            <div class="facility-card">
+                <div class="facility-img"><i class="fas fa-video"></i></div>
+                <div class="facility-content">
+                    <h3>Analysis Room</h3>
+                    <p>Theoretical learning space where players study game tactics and review match footage.</p>
+                    <ul class="facility-features">
+                        <li>Large screen projection</li>
+                        <li>Tactical whiteboards</li>
+                        <li>Individual review stations</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 60px; text-align: center;">
+            <p style="color: var(--gray); max-width: 600px; margin: 0 auto;">"Experience the environment that builds
+                champions. Visits are welcome during open trial days."</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Valendu Academy. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

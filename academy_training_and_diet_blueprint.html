@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training & Diet Blueprint | Valendu Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-black: #050505;
+            --secondary-black: #121212;
+            --gold: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.4);
+            --white: #ffffff;
+            --gray: #a0a0a0;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--primary-black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 30px 0;
+            border-bottom: 1px solid var(--secondary-black);
+            margin-bottom: 40px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .gold-text {
+            color: var(--gold);
+        }
+
+        .btn-back {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover {
+            background: var(--gold);
+            color: var(--primary-black);
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        /* Section Styling */
+        .blueprint-section {
+            margin-bottom: 80px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Grid Layouts */
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .blueprint-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .blueprint-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .blueprint-card h3 {
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+
+        .time-slot {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .time-slot:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .time {
+            color: var(--gold);
+            font-weight: 600;
+            min-width: 80px;
+        }
+
+        .activity {
+            color: var(--gray);
+            text-align: right;
+        }
+
+        /* Diet Table */
+        .diet-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: var(--glass);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .diet-table th,
+        .diet-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .diet-table th {
+            background-color: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .diet-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .diet-table td {
+            color: var(--gray);
+        }
+
+        .nutrition-tips {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .tip-box {
+            background: var(--secondary-black);
+            padding: 20px;
+            border-left: 4px solid var(--gold);
+        }
+
+        .tip-box h4 {
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .tip-box p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--secondary-black);
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 50px;
+        }
+
+        @media(max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .diet-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo"><span class="gold-text">VALENDU</span> ACADEMY</div>
+            <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title">Training & Diet <span class="gold-text">Blueprint</span></h1>
+
+        <!-- Training Section -->
+        <section class="blueprint-section">
+            <div class="section-header">
+                <h2>Elite Training Structure</h2>
+                <p>Designed for maximizing performance and recovery.</p>
+            </div>
+
+            <div class="schedule-grid">
+                <!-- Daily Schedule -->
+                <div class="blueprint-card">
+                    <h3><i class="fas fa-clock"></i> Daily Schedule (Sample)</h3>
+                    <div class="time-slot">
+                        <span class="time">06:00 AM</span>
+                        <span class="activity">Wake Up & Hydration</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">07:00 AM</span>
+                        <span class="activity">Morning Pitch Session (Technical)</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">09:00 AM</span>
+                        <span class="activity">Post-workout Meal</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">12:00 PM</span>
+                        <span class="activity">Rest / Video Analysis</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">04:30 PM</span>
+                        <span class="activity">Evening Session (Tactical/Fitness)</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">07:00 PM</span>
+                        <span class="activity">Recovery (Stretching/Ice Bath)</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">10:00 PM</span>
+                        <span class="activity">Sleep (8-9 Hours Essential)</span>
+                    </div>
+                </div>
+
+                <!-- Weekly Focus -->
+                <div class="blueprint-card">
+                    <h3><i class="fas fa-calendar-week"></i> Weekly Focus Structure</h3>
+                    <div class="time-slot">
+                        <span class="time">Monday</span>
+                        <span class="activity">Fitness & Aerobic Endurance</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">Tuesday</span>
+                        <span class="activity">Technical Skills & Ball Control</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">Wednesday</span>
+                        <span class="activity">Tactical Setup & Positioning</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">Thursday</span>
+                        <span class="activity">high-Intensity Specific Drills</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">Friday</span>
+                        <span class="activity">Match Simulation & Set Pieces</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">Saturday</span>
+                        <span class="activity">Active Recovery / Friendly Match</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">Sunday</span>
+                        <span class="activity">Complete Rest & Analysis</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nutrition-tips" style="margin-top: 30px; grid-template-columns: 1fr 1fr;">
+                <div class="tip-box">
+                    <h4><i class="fas fa-chart-line"></i> Skill Improvement Roadmap</h4>
+                    <p>Beginner: Ball mastery & passing → Intermediate: Game intelligence & shielding → Advanced:
+                        Decision making & execution under pressure.</p>
+                </div>
+                <div class="tip-box">
+                    <h4><i class="fas fa-bed"></i> Recovery Strategy</h4>
+                    <p>Recovery is when growth happens. Prioritize sleep, foam rolling, and contrast showers to reduce
+                        muscle fatigue.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diet Section -->
+        <section class="blueprint-section">
+            <div class="section-header">
+                <h2>Nutrition <span class="gold-text">Plan</span></h2>
+                <p>Fuel your body like a professional athlete.</p>
+            </div>
+
+            <div class="blueprint-card" style="margin-bottom: 30px;">
+                <h3><i class="fas fa-utensils"></i> Weekly Meal Plan</h3>
+                <table class="diet-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Breakfast (Carbs + Protein)</th>
+                            <th>Lunch (Balanced)</th>
+                            <th>Dinner (Light + Protein)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Oatmeal with banana & nuts</td>
+                            <td>Grilled chicken breast + Brown rice</td>
+                            <td>Fish fillet + Steamed veggies</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>Scrambled eggs + Whole wheat toast</td>
+                            <td>Pasta with lean meat sauce</td>
+                            <td>Grilled paneer/tofu salad</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>Smoothie (Berries, Protein, Spinach)</td>
+                            <td>Quinoa salad + Grilled turkey</td>
+                            <td>Chicken soup + Sweet potato</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>Greek yogurt + Granola</td>
+                            <td>Rice bowl with beans & avocado</td>
+                            <td>Grilled fish + Asparagus</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>Boiled eggs + Fruit salad</td>
+                            <td>Sandwich (Whole grain, Lean meat)</td>
+                            <td>Baked chicken + Salad</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>Pancakes (Oats/Banana base)</td>
+                            <td>Wrap (Chicken/Veggie)</td>
+                            <td>Light soup + Toast</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Cheat Meal (Moderate)</td>
+                            <td>Roast chicken + Potatoes</td>
+                            <td>Salad + Fruits</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="schedule-grid">
+                <div class="blueprint-card">
+                    <h3><i class="fas fa-tint"></i> Hydration Guide</h3>
+                    <ul style="list-style: none; color: var(--gray);">
+                        <li style="margin-bottom: 10px;">• Drink 500ml water upon waking up.</li>
+                        <li style="margin-bottom: 10px;">• 200-300ml every 20 mins during training.</li>
+                        <li style="margin-bottom: 10px;">• Electrolytes recommended for sessions > 1 hour.</li>
+                        <li>• Monitor urine color for hydration status.</li>
+                    </ul>
+                </div>
+                <div class="blueprint-card">
+                    <h3><i class="fas fa-ban"></i> Foods to Avoid</h3>
+                    <ul style="list-style: none; color: var(--gray);">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-times"
+                                style="color: red; margin-right: 8px;"></i> Deep fried foods (Samosas, Fries)</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-times"
+                                style="color: red; margin-right: 8px;"></i> Sugary sodas & energy drinks</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-times"
+                                style="color: red; margin-right: 8px;"></i> Processed meats (Sausages, Salami)</li>
+                        <li><i class="fas fa-times" style="color: red; margin-right: 8px;"></i> Excessive white sugar /
+                            sweets</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="nutrition-tips">
+                <div class="tip-box">
+                    <h4>Pre-Training Meal</h4>
+                    <p>Consume 2-3 hours before. Focus on complex carbs (Oats, Sweet Potato, Brown Rice) for sustained
+                        energy.</p>
+                </div>
+                <div class="tip-box">
+                    <h4>Post-Training Meal</h4>
+                    <p>Consume within 45 mins. essential for recovery. Protein + Simple Carbs (Whey shake/Chocolate milk
+                        + Banana).</p>
+                </div>
+                <div class="tip-box">
+                    <h4>Supplements (Consult Doctor)</h4>
+                    <p>Whey Protein (Recovery), Creatine (Explosive Power), Multivitamins (Immunity). *Whole food is
+                        always better.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Valendu Academy. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

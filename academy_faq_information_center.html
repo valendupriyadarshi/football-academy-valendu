@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ & Information | Valendu Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-black: #050505;
+            --secondary-black: #121212;
+            --gold: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.4);
+            --white: #ffffff;
+            --gray: #a0a0a0;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--primary-black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 30px 0;
+            border-bottom: 1px solid var(--secondary-black);
+            margin-bottom: 40px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .gold-text {
+            color: var(--gold);
+        }
+
+        .btn-back {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover {
+            background: var(--gold);
+            color: var(--primary-black);
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        /* FAQ Styling */
+        .faq-item {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .faq-item:hover {
+            border-color: var(--gold);
+        }
+
+        .faq-question {
+            padding: 20px;
+            background: var(--secondary-black);
+            font-weight: 700;
+            color: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-question i {
+            color: var(--gold);
+            transition: 0.3s;
+        }
+
+        .faq-answer {
+            padding: 20px;
+            color: var(--gray);
+            line-height: 1.7;
+            display: none;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--secondary-black);
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo"><span class="gold-text">VALENDU</span> ACADEMY</div>
+            <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title">FAQ <span class="gold-text">& Help</span></h1>
+
+        <div class="faq-list">
+
+            <div class="faq-item active">
+                <div class="faq-question">
+                    What age groups does Valendu Academy train?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    We currently offer professional training for three main batches: U-10 (Foundation), U-15
+                    (Development), and our Elite Senior squad. We accept players starting from age 5 up to 21 years.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I register for a trial?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    You can register for upcoming trials through our website's <a
+                        href="academy_trial_registration_form.html"
+                        style="color: var(--gold); text-decoration: none;">Registration Page</a>. Simply fill out the
+                    form, and our team will contact you with the trial date and venue details.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What equipment do I need to bring?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    For trials and initial training sessions, players must bring their own football boots (studs), shin
+                    guards, and water bottles. The academy provides training jerseys, bibs, and balls.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Are the coaches certified?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Yes, all our head coaches hold AIFF or AFC licenses and have prior experience playing or coaching at
+                    the professional level. We prioritize quality guidance for every player.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Is there a scholarship program?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    We offer merit-based scholarships for exceptional talents who perform well in our district and
+                    state-level teams. Financial aid is also available for underprivileged players with high potential.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How often are matches played?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Competitive match practice is held every weekend. Additionally, our elite teams participate in
+                    district leagues, inter-academy tournaments, and friendly matches regularly.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What if a player gets injured during training?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Player safety is our priority. We have a certified physio on-site during sessions for immediate
+                    care, and we have tie-ups with local hospitals for any serious injuries. All registered players are
+                    also covered under basic sports insurance.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Valendu Academy. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                // Close others
+                faqItems.forEach(i => {
+                    if (i !== item) i.classList.remove('active');
+                });
+                // Toggle current
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

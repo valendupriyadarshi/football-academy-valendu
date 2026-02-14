@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Training Programs | Valendu Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-black: #050505;
+            --secondary-black: #121212;
+            --gold: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.4);
+            --white: #ffffff;
+            --gray: #a0a0a0;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--primary-black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 30px 0;
+            border-bottom: 1px solid var(--secondary-black);
+            margin-bottom: 40px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .gold-text {
+            color: var(--gold);
+        }
+
+        .btn-back {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover {
+            background: var(--gold);
+            color: var(--primary-black);
+        }
+
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        /* Program Cards */
+        .program-section {
+            margin-bottom: 80px;
+        }
+
+        .program-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            background: linear-gradient(90deg, var(--secondary-black), transparent);
+            padding: 20px;
+            border-left: 5px solid var(--gold);
+        }
+
+        .program-header i {
+            font-size: 2rem;
+            color: var(--gold);
+        }
+
+        .program-header h2 {
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .detail-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 30px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .detail-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .detail-card h3 {
+            color: var(--gold);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .detail-list {
+            list-style: none;
+        }
+
+        .detail-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+            color: var(--gray);
+        }
+
+        .detail-list li::before {
+            content: '•';
+            color: var(--gold);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Weekly Goals */
+        .weekly-goals {
+            margin-top: 30px;
+            background: var(--secondary-black);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .weekly-goals h3 {
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .weekly-goals p {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--secondary-black);
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo"><span class="gold-text">VALENDU</span> ACADEMY</div>
+            <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title">Professional <span class="gold-text">Training Programs</span></h1>
+
+        <!-- U-10 Batch -->
+        <div class="program-section">
+            <div class="program-header">
+                <i class="fas fa-seedling"></i>
+                <h2>U-10 Foundation Batch</h2>
+            </div>
+            <div class="program-grid">
+                <div class="detail-card">
+                    <h3><i class="fas fa-running"></i> Warm-up Routine</h3>
+                    <ul class="detail-list">
+                        <li>Light jogging (5 mins)</li>
+                        <li>Dynamic stretching (Arm circles, leg swings)</li>
+                        <li>Reaction games for agility</li>
+                        <li>Ball familiarity drills (Toe taps)</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3><i class="fas fa-futbol"></i> Technical Drills</h3>
+                    <ul class="detail-list">
+                        <li>Basic passing technique (Inside foot)</li>
+                        <li>Dribbling through cones (Both feet)</li>
+                        <li>Ball control & trapping</li>
+                        <li>Introduction to shooting mechanics</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3><i class="fas fa-chess-board"></i> Tactical Training</h3>
+                    <ul class="detail-list">
+                        <li>Understanding positions (Defender, Striker)</li>
+                        <li>Basic spacing & movement</li>
+                        <li>Teamwork & communication games</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="weekly-goals">
+                <h3>Weekly Improvement Goal</h3>
+                <p>"Master ball control with both feet and enjoy the game."</p>
+            </div>
+        </div>
+
+        <!-- U-15 Batch -->
+        <div class="program-section">
+            <div class="program-header">
+                <i class="fas fa-bolt"></i>
+                <h2>U-15 Development Batch</h2>
+            </div>
+            <div class="program-grid">
+                <div class="detail-card">
+                    <h3><i class="fas fa-running"></i> Warm-up Routine</h3>
+                    <ul class="detail-list">
+                        <li>Jogging & Sprints (10 mins)</li>
+                        <li>Dynamic mobility (High knees, butt kicks)</li>
+                        <li>Rondo (5v2 possession game)</li>
+                        <li>Core activation exercises</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3><i class="fas fa-futbol"></i> Technical Drills</h3>
+                    <ul class="detail-list">
+                        <li>Advanced passing patterns (One-touch)</li>
+                        <li>1v1 Attacking & Defending</li>
+                        <li>Crossing & finishing drills</li>
+                        <li>Long ball accuracy</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3><i class="fas fa-dumbbell"></i> Fitness & Conditioning</h3>
+                    <ul class="detail-list">
+                        <li>Speed & agility ladders</li>
+                        <li>Bodyweight strength (Pushups, Squats)</li>
+                        <li>Endurance running (Intervals)</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3><i class="fas fa-chess-board"></i> Tactical Training</h3>
+                    <ul class="detail-list">
+                        <li>Formation discipline (4-3-3, 4-4-2)</li>
+                        <li>Pressing triggers & defensive shape</li>
+                        <li>Counter-attack strategies</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="weekly-goals">
+                <h3>Weekly Improvement Goal</h3>
+                <p>"Enhance tactical awareness and physical endurance."</p>
+            </div>
+        </div>
+
+        <!-- Elite Senior Batch -->
+        <div class="program-section">
+            <div class="program-header">
+                <i class="fas fa-trophy"></i>
+                <h2>Elite Senior Batch</h2>
+            </div>
+            <div class="program-grid">
+                <div class="detail-card">
+                    <h3><i class="fas fa-fire"></i> Warm-up & Activation</h3>
+                    <ul class="detail-list">
+                        <li>FIFA 11+ Injury Prevention Routine</li>
+                        <li>High-intensity interval sprints</li>
+                        <li>Position-specific activation</li>
+                        <li>Complex possession drills</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3><i class="fas fa-bullseye"></i> Advanced Simulation</h3>
+                    <ul class="detail-list">
+                        <li>High-pressure match scenarios</li>
+                        <li>Set-piece specialization (Corners, Free kicks)</li>
+                        <li>Box-to-box transition drills</li>
+                        <li>Weak foot mastery</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3><i class="fas fa-dumbbell"></i> Pro Conditioning</h3>
+                    <ul class="detail-list">
+                        <li>Plyometrics for explosive power</li>
+                        <li>Strength training (Gym sessions)</li>
+                        <li>Recovery protocols (Foam rolling)</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3><i class="fas fa-brain"></i> Mental & Tactical</h3>
+                    <ul class="detail-list">
+                        <li>Video analysis sessions</li>
+                        <li>Game management (Winning vs Losing positions)</li>
+                        <li>Leadership & communication</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="weekly-goals">
+                <h3>Weekly Improvement Goal</h3>
+                <p>"Achieve peak match fitness and execute complex tactical plans."</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Valendu Academy. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
