@@ -1511,3 +1511,22 @@ nav ul li a:hover {
   font-weight: 600;
   cursor: pointer;
 }
+
+body {
+  background: linear-gradient(to bottom, #f8f8f8, #eaeaea);
+}
+
+.section {
+  padding: 80px 40px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
