@@ -1477,4 +1477,37 @@ body.light-mode .elite-leader {
     .testimonial-card {
         padding: 25px 20px;
     }
+
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #d4af37;
+}
+
+.join-btn {
+  background: #d4af37;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
 }
